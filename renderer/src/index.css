@@ -5,9 +5,201 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
+}
+
+html, body, #root, .App {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  background: url("background.png");
+  background-size: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  width: 100%;
+}
+
+.header-row {
+  width: 78%;
+  padding: 30px 11%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 303px;
+  height: 70px;
+}
+
+.header-upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.header-upload {
+  background: white;
+  border-radius: 40px;
+
+  padding: 6px;
+  font-weight: bold;
+}
+
+.header-actions {
+  width: 80%;
+
+  padding: 12px 10%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.header-actions > .btn {
+  flex: 1;
+  margin: 0 12px;
+  padding: 12px 0;
+
+  font-size: 18px;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  
+  background: #0085BA;
+  color: #FFF6EF;
+}
+
+.btn:hover {
+  /* background: #eee; */
+  cursor: pointer;
+}
+
+.btn-small {
+  padding: 4px;
+}
+
+.btn-normal {
+  padding: 8px;
+}
+
+.btn-big {
+  padding: 16px 32px;
+}
+
+.commands-wrapper {
+  flex: 1;
+}
+
+.commands {
+  width: 80%;
+  padding: 0 10%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.commands-left, .commands-right {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.commands-left {
+  border-right: 2px solid #96999C;
+}
+
+.commands-left > .command {
+  display: flex;
+  flex-direction: row;
+}
+
+.commands-right {
+
+}
+
+.commands-right > .command {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.command {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 5px 5%;
+  height: 25px;
+  width: 90%;
+}
+
+.command > .btn {
+  padding: 8px;
+}
+
+.command > input[type=checkbox] {
+  appearance: none;
+
+  width: 22px;
+  height: 22px;
+
+  border: 2px solid #212529;
+  border-radius: 2px;
+}
+
+.command > input[type=checkbox]:checked:after {
+	content: '✔️';
+  font-size: 14px;
+  color: transparent;
+  text-shadow: 0 0 0 #212529;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer-actions {
+  height: 30px;
+
+  width: 70%;
+  padding: 10px 15%;
+
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  flex-shrink: unset;
+}
+
+.footer-actions > .btn {
+  width: 150px;
+  margin: 0 70px;
+}
+
+.footer-notice {
+  background: white;
+  border-top: 1px solid black;
+
+  padding: 10px;
+  font-size: 12px;
 }

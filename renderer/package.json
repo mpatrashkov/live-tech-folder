@@ -33,7 +33,7 @@
     "react-build": "react-scripts build",
     "react-test": "react-scripts test --env=jsdom",
     "react-eject": "react-scripts eject",
-    "react-prebuild": "cross-env cp ../main/src/*.js public/",
+    "react-prebuild": "echo 1",
     "electron-build": "electron-builder",
     "release": "npm run react-prebuild && npm run react-build && electron-builder --publish=always",
     "build": "npm run react-prebuild && npm run react-build && npm run electron-build",
@@ -66,6 +66,9 @@
     "concurrently": "^4.1.1",
     "cross-env": "^5.2.0",
     "@types/electron": "^1.6.10",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "electron-is-dev": "^1.1.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.2"
   }
 }
